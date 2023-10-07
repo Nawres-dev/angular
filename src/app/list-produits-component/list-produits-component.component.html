@@ -1,0 +1,62 @@
+
+
+<p>Rechercher d'un produit</p>
+ 
+<input type="text" [(ngModel)]="search" placeholder="Search by code" class="center-input">
+
+<div *ngFor="let produit of listProduits;let i=index" class="container">
+    <ng-container *ngIf="produit.code.includes(search)">
+     <ol >
+        
+   <li>
+    Produit:Identifiant:{{produit.idProduit}}
+
+    <input type='submit' (click)="CalculTVA(i)" value="Ajuster tauxTVA" [disabled]="produit.tauxTVA==0.02" >
+        <ul>Identifiant:{{produit.idProduit}}</ul>
+         <ul> Code:{{produit.code}}</ul>
+        <!-- reponse par property binding
+        <li [style.color]="produit.prixUnitaire <= 50 ? 'blue' : 'initial'"
+          [style.fontStyle]="produit.prixUnitaire <= 50 ? 'italic' : 'normal'"
+          [style.fontSize.px]="produit.prixUnitaire <= 50 ? 20 : 16"> -->
+
+        <!-- reponse par ngClass
+        <li [ngClass]="{'blue-text': produit.prixUnitaire <= 50}"> -->
+        <div *ngIf="produit.prixUnitaire<=50"[ngStyle]="{'font-style': 'italic','color':'blue','font-family':'20px'}"><ul> Prix unitaire:{{produit.prixUnitaire}}</ul></div>
+        <ul>Taux TVA:{{produit.tauxTVA}}</ul>
+        <div *ngIf="j==i">Produit modifié</div>
+
+    </li>
+</ol>
+</ng-container>
+</div>
+
+<p>Ajout d'un produit</p>
+<form #f="ngForm" class="container" >
+    
+        <label for="idProduit">idProduit : </label>
+        <input name="idProduit" type="text" id="idProduit" ngModel><BR>
+    
+        <label for="code">code : </label>
+        <input name="code" type="text" id="code" ngModel><BR>
+    
+    
+         <label for="libelle">libelle : </label>
+        <input name="libelle" type="text" id="libelle" ngModel><BR>
+    
+        <label for="prixUnitaire">prixUnitaire : </label>
+        <input name="prixUnitaire" type="text" id="prixUnitaire" ngModel><BR>
+    
+        <label for="tauxTVA">tauxTVA : </label>
+        <input name="tauxTVA" type="text" id="tauxTVA" ngModel><BR>
+                   
+            <input type="submit" value="Ajouter" (click)="Ajouter(f)">
+    </form>
+    
+
+
+
+
+
+
+
+

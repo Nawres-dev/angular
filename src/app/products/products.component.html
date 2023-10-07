@@ -1,0 +1,20 @@
+<p>products works!</p>
+<div *ngFor="let product of listProducts; let i=index">
+    <div *ngIf="product.title==nameOfProduct || nameOfProduct==''">
+
+<!-- <div *ngIf= "product.quantity>20" [ngstyle]="{'backgroundColor' : product.quantity>20?'red':'blue'}"> -->
+{{product.id}}
+{{product.title}}
+{{product.price}}
+{{product.like}}
+<!-- <input type="submit" value="like" (click)="increaseLike(i)"> -->
+<input type="submit" value="like" (click)="goTocomponentDetail(product.id)">
+ <!-- slache ili kbal user bech ynahi les routes ili kbal user (eviter concatenation des route )dans ce cas bech ynahi p -->
+<a routerLink="/user/detail/{{product.id}}"> detail</a>
+<!-- meme ecriture que ili kbalha avec syntaxe different
+<a [routerLink]="['/user/detail/',product.id]"> detail</a> -->
+</div>
+
+</div>
+
+<input type="text" [(ngModel)]="nameOfProduct">

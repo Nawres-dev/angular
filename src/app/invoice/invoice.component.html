@@ -1,0 +1,8 @@
+<div>
+    <h1>Invoice Details</h1>
+    <p>ID de la facture: {{ id }}</p>
+    <p>Facture active: {{ active ? 'Oui' : 'Non' }}</p>
+    <p *ngIf="active">Autres détails de la facture...</p>
+    <p *ngIf="!active">Impossible de visualiser les détails de la facture.</p>
+  </div>
+  <button [routerLink]="['/mvoice']">Retour</button>

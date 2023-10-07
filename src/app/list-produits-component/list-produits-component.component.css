@@ -1,0 +1,162 @@
+/* Apply styles to the entire page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style for the header */
+  p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  /* Style for tables */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px auto;
+  }
+  
+  table, th, td {
+    border: 1px solid #000;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Style for form container */
+  .container {
+    width: 50%;
+    margin: 20px auto;
+  }
+  
+  /* Style for form labels and inputs */
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for submit button */
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Style for list items */
+  ol {
+    list-style-type: decimal;
+    margin-left: 0;
+    padding-left: 20px;
+  }
+  
+  li {
+    margin: 10px 0;
+  }
+  
+  /* Style for modified products */
+  .modified-product {
+    color: green;
+    font-weight: bold;
+  }
+  
+   ul {
+    text-align: left; /* Align the text to the left within the ul element */
+  }
+  /* Additional styles for specific elements if needed */
+
+  .cadre {
+    
+    width: 30%;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+  }
+
+
+  .cadre {
+    border: 2px solid #000; /* Border style */
+    padding: 10px; /* Padding inside the cadre */
+    margin: 10px 0; /* Margin around the cadre */
+  }
+
+  input[type="text"] {
+    width: 200px; /* Set the width as needed */
+    text-align: left; /* Reset text alignment for the input text */
+
+  }
+
+
+  .center-input {
+    display: block; /* Make the input a block-level element */
+    margin: 0 auto; /* Center the input horizontally */
+    width: 80%; /* Set the desired width */
+    padding: 10px; /* Add padding for spacing */
+  }
+
+  /* Style for the form container */
+.container {
+    width: 400px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center; /* Reset text alignment for the form */
+    margin-block: 1%;
+  }
+  
+  /* Style for form inputs */
+  .container input[type="text"] {
+    width: 100%; /* Make inputs expand to fill the container */
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+  
+
+  }
+  
+  /* Style for the submit button */
+  .container input[type="submit"] {
+    background-color: #007bff; /* Change the button color */
+    color: #fff; /* Change the text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+ 
+  }
+  
+  /* Style for the submit button on hover (optional) */
+  .container input[type="submit"]:hover {
+    background-color: #0056b3; /* Change the button color on hover */
+    margin: auto;
+  }
+
+
+

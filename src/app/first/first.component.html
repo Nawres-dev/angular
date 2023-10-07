@@ -1,0 +1,32 @@
+<p>first works!</p>
+<!-- type de DataBinding : interpolation -->
+<h1>{{property1}}</h1>
+<h1>{{1+methodeA()}}</h1>
+<h1>{{1+2}}</h1>
+
+<!-- type de DataBinding : property binding -->
+<input type="text" [disabled]='isdisabled' required placeholder="insert name">
+
+<!-- type de DataBinding : event binding -->
+<br><br>
+<button (click)="methodeB()"> envoyer</button>
+<p>{{message}} </p>
+
+
+
+<!-- ===================== -->
+<h1>bonjour {{klass |lowercase}}</h1>
+<hr>
+<input type="submit" (click)="sayHello()" value="hello">
+<div [style.backgroundColor]="kolor">
+    test
+</div>
+<!-- type de DataBinding : two way data binding -->
+<input type="text" [(ngModel)]="kolor" appChangeColor>
+<input type="text" #t>
+<input type="submit" (click)="changeColor(t.value)">
+
+
+
+<div appChangeColor>directive</div>
+<div appChangeColor>directive1</div>
